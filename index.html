@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#233932">
+  <title>SpanBuy spreadsheet – Varekategorier, mål og QC</title>
+  <meta name="description" content="Brug denne danske guide til SpanBuy spreadsheet til at finde varekategorier, kontrollere størrelser og QC-billeder og sammenligne fragt til Danmark.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="da_DK">
+  <meta property="og:title" content="SpanBuy spreadsheet – Varekategorier, mål og QC">
+  <meta property="og:description" content="Se ti kategorier hos HipoBuyFind og få en dansk tjekliste til produktlinks, størrelser, QC-billeder og fragt.">
+  <link rel="preconnect" href="https://extrabutterny.com">
+  <style>
+    :root{color-scheme:light;--paper:#f7f1e6;--ink:#233932;--muted:#485e54;--line:#bdb9aa;--gold:#f6cc78}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+    main,.wrap{width:min(72rem,calc(100% - 2rem));margin:auto}
+    header,footer{background:var(--ink);color:var(--paper)}
+    header .wrap,footer .wrap{padding:.8rem 0}
+    a{color:inherit;text-underline-offset:.22em}
+    a:focus-visible,summary:focus-visible{outline:3px solid #b35419;outline-offset:4px}
+    h1,h2,h3,p,figure{margin:0}
+    h1,h2{font-family:Georgia,serif;font-weight:500;line-height:1.05}
+    h1{font-size:clamp(2.5rem,7vw,5.7rem);letter-spacing:-.055em;overflow-wrap:anywhere}
+    h2{font-size:clamp(1.75rem,3.4vw,2.65rem);margin-bottom:.65rem}
+    h3{font-size:1.12rem;line-height:1.3}
+    p+p,h3+p{margin-top:.55rem}
+    .intro{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(1rem,4vw,3rem);align-items:center;margin:1.5rem 0 2.8rem}
+    .lead{max-width:56ch;color:var(--muted);margin:.9rem 0 1.35rem}
+    .categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 .85rem;list-style:none;padding:0;margin:0}
+    .categories a{display:flex;justify-content:space-between;align-items:center;gap:.3rem;min-height:2.8rem;padding:.4rem .15rem;border-top:1px solid var(--line);font-weight:650;text-decoration:none}
+    .categories a:hover,.button:hover{background:var(--gold)}
+    .cover{background:var(--gold);padding:.75rem}
+    img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;background:#fff}
+    figcaption{padding:.4rem .15rem 0;font-size:.87rem}
+    section{margin-bottom:2.7rem}
+    .gallery,.guides{display:grid;gap:1rem}
+    .gallery{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .gallery figure{border-top:2px solid var(--ink);padding-top:.45rem}
+    .guides{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:1rem}
+    article,details{border-top:1px solid var(--line);padding:.7rem 0}
+    details:last-child{border-bottom:1px solid var(--line)}
+    summary{cursor:pointer;font-weight:700;padding:.35rem 0}
+    details p{padding:.15rem 0 .45rem}
+    .button{display:inline-block;border:1px solid currentColor;padding:.45rem .8rem;font-weight:700}
+    @media(max-width:49rem){.intro{grid-template-columns:1fr}.cover{width:min(100%,29rem)}}
+    @media(max-width:34rem){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.guides{grid-template-columns:1fr;gap:.25rem}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "name":"Spørgsmål om SpanBuy spreadsheet",
+    "inLanguage":"da",
+    "mainEntity":[
+      {"@type":"Question","name":"Hvad er et SpanBuy spreadsheet?","acceptedAnswer":{"@type":"Answer","text":"Det er en oversigt over produktreferencer og links. På denne side fører kategorierne til HipoBuyFind."}},
+      {"@type":"Question","name":"Hvordan kontrollerer jeg et produktlink?","acceptedAnswer":{"@type":"Answer","text":"Åbn produktsiden, og tjek model, farve og størrelse. Hvis en variant er udsolgt, så se efter en anden vare med samme mål."}},
+      {"@type":"Question","name":"Hvad viser QC-billeder?","acceptedAnswer":{"@type":"Answer","text":"QC-billeder viser synlige detaljer som sømme, mærker og farver. Et foto med målebånd kan også vise varens faktiske mål."}},
+      {"@type":"Question","name":"Hvordan sammenligner jeg fragt til Danmark?","acceptedAnswer":{"@type":"Answer","text":"Brug samme postnummer, pakkemål og vægt i hvert tilbud. Omregn de samlede beløb til danske kroner, og tjek hvilke gebyrer tilbuddet dækker."}}
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/pfxdh/">
+</head>
+<body>
+  <header><div class="wrap"><a href="https://www.hipobuyfind.com">HipoBuyFind</a></div></header>
+  <main>
+    <div class="intro">
+      <div>
+        <h1>SpanBuy spreadsheet</h1>
+        <p class="lead">Find sko, tøj og tilbehør i HipoBuyFinds katalog. Brug guiden til at tjekke varenummer, mål og QC-billeder, før du vælger en vare.</p>
+        <nav aria-labelledby="kategorier">
+          <h2 id="kategorier">Find en kategori</h2>
+          <ul class="categories">
+            <li><a href="https://hipobuyfind.com/category-911-Shoes.html">Sko <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">Hættetrøjer og trøjer <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://hipobuyfind.com/category-913-T-Shirts.html">T-shirts <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://hipobuyfind.com/category-914-Jackets.html">Jakker <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">Bukser og shorts <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://hipobuyfind.com/category-916-Headwear.html">Hovedbeklædning <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://hipobuyfind.com/category-917-Sets.html">Tøjsæt <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">Undertøj <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://hipobuyfind.com/category-919-Jersey.html">Sportstrøjer <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://hipobuyfind.com/category-920-Accessories.html">Tilbehør <span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </nav>
+      </div>
+      <figure class="cover">
+        <img src="https://extrabutterny.com/cdn/shop/products/CW2288-111-1.jpg?v=1612207068&amp;width=720" width="720" height="720" alt="Hvid Nike Air Force 1 ’07 med hvid Swoosh og perforeret tå" fetchpriority="high">
+        <figcaption>Nike Air Force 1 ’07 · billedeksempel</figcaption>
+      </figure>
+    </div>
+
+    <section aria-labelledby="guides">
+      <h2 id="guides">Fire ting at tjekke før køb</h2>
+      <div class="guides">
+        <article>
+          <h3>SpanBuy produktlinks og varianter</h3>
+          <p>Ved kontrol af produktlinks kan du gemme varenummer, sælgernavn og den valgte farve i samme række. Når du finder et alternativ, kan du bruge modelkoden til at sammenligne varianter og se, om din størrelse kan vælges. Ved et udløbet produktlink kan varenummeret hjælpe dig med at finde en ny varebeskrivelse.</p>
+        </article>
+        <article>
+          <h3>SpanBuy størrelsesguide til sko og tøj</h3>
+          <p>Ved valg af skostørrelse skal du sammenligne fodlængde i centimeter med modellens størrelsestabel. Hvis tabellen viser indvendig skolængde, skal du tage højde for plads ved tæerne. Ved sammenligning af tøjmål kan du lægge en trøje, der passer, fladt og måle brystbredde, skulderbredde og ærmelængde. Til bukser kan du bruge taljebredde og indvendig benlængde.</p>
+        </article>
+        <article>
+          <h3>SpanBuy QC-billeder og kvalitetskontrol</h3>
+          <p>Brug billeder til kontrol af syninger, sålens kanter og placering af mærker. Et nærbillede af vaskeetiketten kan hjælpe ved kontrol af materialeoplysninger. Bed om et foto med målebånd, hvis målene er afgørende. Brug en tydeligt angivet lyskilde, hvis du vil vurdere farveafvigelser på billederne.</p>
+        </article>
+        <article>
+          <h3>SpanBuy fragt til Danmark</h3>
+          <p>Sammenlign fragt efter destination, pakkens vægt og mål. Spørg, om volumenvægt indgår i fragtberegningen, og om skotøjsæsken ændrer pakkens mål. Ved beregning af samlet købspris skal du se på varepris, eventuel lokal fragt, international fragt og oplyste gebyrer. Brug danske kroner til at sammenligne tilbud med forskellige valutaer.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="billeder">
+      <h2 id="billeder">Billedeksempler på tøj og tilbehør</h2>
+      <div class="gallery">
+        <figure><img src="https://us.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-surplus-cap%20--M5338M_PM2_Front%20view.jpg?wid=480&amp;hei=480" width="480" height="480" alt="Louis Vuitton Monogram Surplus-kasket set forfra" loading="lazy" decoding="async"><figcaption>Louis Vuitton · kasket</figcaption></figure>
+        <figure><img src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg" width="640" height="640" alt="Beige Gucci-kasket i lærred med GG-mønster" loading="lazy" decoding="async"><figcaption>Gucci · kasket i GG-lærred</figcaption></figure>
+        <figure><img src="https://kream-phinf.pstatic.net/MjAyNTA3MzFfNzAg/MDAxNzUzODk4MTE1MjI3.WHGujKqNd9mT7aHEnAwoupW_atTkD6iQczFjUwc4HVMg.QIMaa4Wt7_-kLRs4KpRV-NQhSMFSfTE8Ggprf8CyWYwg.PNG/a_2fba6b33de3f40fc847572fc7a5614b4.png" width="480" height="480" alt="Orange Hermès Clic H-armbånd med guldfarvet H-lås" loading="lazy" decoding="async"><figcaption>Hermès · Clic H-armbånd</figcaption></figure>
+        <figure><img src="https://assets.christiandior.com/is/image/diorprod/LOOK_H_25_3_LOOK_021_E07?%24lookDefault_GH-GHC%24=&amp;bfc=on&amp;crop=568%2C0%2C1862%2C2000&amp;hei=480&amp;qlt=80&amp;wid=450" width="450" height="480" alt="Blå Dior Oblique T-shirt med jacquardmønster vist på en model" loading="lazy" decoding="async"><figcaption>Dior · T-shirt i jacquard</figcaption></figure>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq">
+      <h2 id="faq">Ofte stillede spørgsmål</h2>
+      <details open><summary>Hvad er et SpanBuy spreadsheet?</summary><p>Det er en oversigt over produktreferencer og links. På denne side fører kategorierne til HipoBuyFind.</p></details>
+      <details><summary>Hvordan kontrollerer jeg et produktlink?</summary><p>Åbn produktsiden, og tjek model, farve og størrelse. Hvis en variant er udsolgt, så se efter en anden vare med samme mål.</p></details>
+      <details><summary>Hvad viser QC-billeder?</summary><p>QC-billeder viser synlige detaljer som sømme, mærker og farver. Et foto med målebånd kan også vise varens faktiske mål.</p></details>
+      <details><summary>Hvordan sammenligner jeg fragt til Danmark?</summary><p>Brug samme postnummer, pakkemål og vægt i hvert tilbud. Omregn de samlede beløb til danske kroner, og tjek hvilke gebyrer tilbuddet dækker.</p></details>
+    </section>
+  </main>
+  <footer><div class="wrap"><a class="button" href="https://www.hipobuyfind.com">Åbn HipoBuyFinds katalog</a></div></footer>
+</body>
+</html>
